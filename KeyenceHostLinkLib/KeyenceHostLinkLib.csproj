@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9624A4B-45FE-4DA7-96B5-7680D404583E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KeyenceHostLinkLib</RootNamespace>
+    <AssemblyName>KeyenceHostLinkLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>KeyenceHostLinkLib.xml</DocumentationFile>
+<NOWARN>1591,660,661</NOWARN>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>KeyenceHostLinkLib.xml</DocumentationFile>
+<NOWARN>1591,660,661</NOWARN>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+      <Reference Include="Microsoft.VisualBasic"/>
+      <Reference Include="mscorlib"/>
+      <Reference Include="Microsoft.CSharp"/>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\BaseClass\CustomListPropertiesEditor.cs" />
+    <Compile Include="Control\BaseClass\PLCBaseControl.Designer.cs">
+      <DependentUpon>PLCBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BaseClass\PLCBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BaseClass\PLCBaseControl_ActionLists.cs" />
+    <Compile Include="Control\BaseClass\PLCBaseControl_Designer.cs" />
+    <Compile Include="Control\BaseClass\PLCBaseControl_DataFormat_Editer.cs" />
+    <Compile Include="Control\BaseClass\PLCBaseControl_MemoryType_Editer.cs" />
+    <Compile Include="Control\ChangePage\PLCButtonChange_ActionLists.cs" />
+    <Compile Include="Control\ChangePage\PLCButtonChange.Designer.cs">
+      <DependentUpon>PLCButtonChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ChangePage\PLCButtonChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LabelComment\PLCComment.Designer.cs">
+      <DependentUpon>PLCComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LabelComment\PLCComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LabelComment\PLCComment_ActionList.cs" />
+    <Compile Include="Control\NumberBox\PLCNumberBox_ActionLists.cs" />
+    <Compile Include="Control\NumberBox\PLCNumberBox_Designer.cs" />
+    <Compile Include="Control\NumberBox\PLCNumberBox.Designer.cs">
+      <DependentUpon>PLCNumberBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\NumberBox\PLCNumberBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\NumberBox\PLCNumberbox_DataFormat_Editer.cs" />
+    <Compile Include="Control\NumberBox\PLCNumberBox_MemoryType_Editer.cs" />
+    <Compile Include="Control\PLCEditBox\PLCEditBox.Designer.cs">
+      <DependentUpon>PLCEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PLCEditBox\PLCEditBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PLCEditBox\PLCEditBox_ActionLists.cs" />
+    <Compile Include="Control\PLCEditBox\PLCEditBox_Designer.cs" />
+    <Compile Include="Control\PLCOutput.Designer.cs">
+      <DependentUpon>PLCOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PLCOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RunningStatus\PLCRunningStatus.Designer.cs">
+      <DependentUpon>PLCRunningStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RunningStatus\PLCRunningStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RunningStatus\PLCRunningStatus_ActionLists.cs" />
+    <Compile Include="Control\RunningStatus\PLCRunningStatus_Designer.cs" />
+    <Compile Include="general.cs" />
+    <Compile Include="HostlinkKeyence.Designer.cs">
+      <DependentUpon>HostlinkKeyence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HostlinkKeyence.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PLCKeyence.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\BaseClass\PLCBaseControl.resx">
+      <DependentUpon>PLCBaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ChangePage\PLCButtonChange.resx">
+      <DependentUpon>PLCButtonChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\LabelComment\PLCComment.resx">
+      <DependentUpon>PLCComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\NumberBox\PLCNumberBox.resx">
+      <DependentUpon>PLCNumberBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PLCEditBox\PLCEditBox.resx">
+      <DependentUpon>PLCEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PLCOutput.resx">
+      <DependentUpon>PLCOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RunningStatus\PLCRunningStatus.resx">
+      <DependentUpon>PLCRunningStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostlinkKeyence.resx">
+      <DependentUpon>HostlinkKeyence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+<Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
+</Project>
